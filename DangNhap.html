@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/79624eb5cd.js"></script>
+    <title>Đăng Nhập</title>
+    
+    <link rel="shortcut icon" href="img/icon.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/TrangChu.css">
+    <link rel="stylesheet" href="css/Header_Footer.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <link rel="stylesheet" href="css/checkJS.css">
+</head>
+
+<body>
+    
+    <!--header -->
+    <header id="header_container">
+        <!--Logo-->
+        <div class="header__logo">
+            <a href="TrangChu.html" class="logo__a">
+                <img class="img_logo" src="img/images-removebg-preview.png" alt=""  height="80" width="162">
+            </a>
+        </div>
+        <!--Thanh điều hướng-->
+        <div class="navbar" id="navbar_menu">
+            <ul class="navbar__ul">
+                <li class="navbar__li"><a class="navbar__a" href="TrangChu.html">Trang chủ</a></li>
+                <li class="navbar__li"><a class="navbar__a" href="Subscription.html">Giới thiệu</a></li>
+                <li class="navbar__li navbar__dropdown "><a id="drop_content_a" class="navbar__a">Sản phẩm <i
+                            class="fa-solid fa-chevron-down"></i></i></a>
+                    <ul id="dropdown-content" class="display-none">
+                        <li class="dropdown-content__li"><a href="SanPham.html#pokemon" class="dropdown-content__a">Pokemon</a></li>
+                        <li class="dropdown-content__li"><a href="SanPham.html#onepiece"
+                                class="dropdown-content__a">One Piece</a></li>
+                        <li class="dropdown-content__li"><a href="SanPham.html#yugioh" class="dropdown-content__a">Yu-Gi-Oh</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header__search-user" action="">  
+                <!-- login && shopping -->
+                <div class="header--user">
+                    <a href="DangNhap.html" class="header--user--btn user--btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                    <a href="GioHang.html" class="shopping__cart header--user--btn shop--btn">
+                        <i class="fa-solid fa-cart-shopping"></i><sup class="no__order-item total">0</sup>
+                    </a>
+                </div>
+
+                <!-- search -->
+                <div class="header--search">
+                    <input class="search--input" type="text" placeholder="Tìm kiếm...">
+                    <button class="search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <section class="login-hero">
+            <!--Phần IMG bên trái-->
+            <div class="login-hero__img">
+                <a href="trangchu.html"><img alt="TCGplayer.com" class="login-hero__logo" src="img/images-removebg-preview.png"></a>
+                <img alt="" class="login-hero__main-img" src="img/Sign In1.svg">
+            </div>
+            <!--Phần sign-->
+            <section class="login-hero__sign-in">
+                <section class="signup-content">
+                    <h1>Sign in</h1>
+                    <!--Form Sign-->
+                    <form class="signup-content__form" id="form">
+                        <div class="form-input">
+                            <label for="input">Email</label>
+                            <input id="email" type="email" name="email" required>
+                        </div>
+    
+                        <div class="form-input">
+                            <label for="input">Password</label>
+                            <input id="password" type="password" name="Password" required>
+                        </div>
+    
+                        <div class="checkbox__container">
+                            <label class="checkbox__facet checkbox enabled">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox__option-value">I agree to the TCGplayer</span>
+                            </label>
+                        </div>
+                        <input type="submit" class="submit" name="submit" value="Login">
+                        
+                    </form>
+                    <section class="login-footer">
+                        <div class="login-footer__sign-in">Already have an Account? <br>
+                            <a href="DangKy.html" class="is-active">Sign up</a>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <!--Footer -->
+    <footer>
+        <div class="container1">
+            <div class="row">
+                <div class="column">
+                    <h3>How Can We Help?</h3>
+                    <p>Contact Customer Service</p>
+                    <p>Blog</p>
+                    <p>Help Center</p>
+                    <p>Accessibility</p>
+                    <p>Leave Us Feedback</p>
+                    <p>Refund and Return Policy</p>
+                    <p>Security Researchers</p>
+                </div>
+                <div class="column">
+                    <h3>Buy With Us</h3>
+                    <p>TCGplayer Subscription</p>
+                    <p>Buyer Safeguard</p>
+                    <p>Direct by TCGplayer</p>
+                    <p>Gift Cards</p>
+                    <p>Cart Optimizer</p>
+                    <p>Mass Entry</p>
+                    <p>Collection Tracker</p>
+                </div>
+                <div class="column">
+                    <h3>Connect With Us</h3>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!--Quay lại đầu trang-->
+    <a href="#" class="back-top">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <!-- Java Script -->
+    <script src="Js/submit.js"></script>
+    <script src="Js/ThemSanPham.js"></script>
+    <script src="Js/main.js"></script>
+   
+</body>
+
+</html>

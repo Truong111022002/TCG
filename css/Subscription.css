@@ -1,0 +1,151 @@
+
+:root {
+--var-color: rgba(47, 23, 201, 0.859);
+font-family: Arial, Helvetica, sans-serif;
+}
+.subcrition__first {
+    background-image: url(../img/background.webp);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: var(--var-color);
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: center;
+}
+/* Áp dụng cho lớp hoạt đông với min-width : 462px */
+@media screen and (max-width:462px) {
+    .subcrition__first {
+        background-size: 60%;
+        height: 500px;
+        justify-content: start;
+        align-items: center;
+        background-position: center bottom;
+    }
+    .subcrition__first h1, .subcrition__first h2{
+        font-size: 2em;
+    }
+}
+
+.subcrition__first h1{
+    font-size: 2em;
+}
+.subcrition__first h2{
+    font-size: 1.2em;
+}
+
+.subcription__second{
+padding: 30px;
+background-color: #00000023;
+}
+
+@media screen and (max-width:768px) {
+    .second__info{
+        flex-direction: column;
+        align-items:center;
+        }
+
+}
+.subcription__second .second__info{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 0 50px;
+
+}
+
+.second__info div {
+background-color: #333;
+height: 15em;
+width: 15em;
+border-radius: 50%;
+text-align: center;
+border: 5px solid var(--var-color);
+color: #fff;
+}
+
+.subcription__second h1{
+text-align: center;
+padding: 20px;
+font-size: 2.5em;
+font-weight: 700;
+}
+
+.second__1, .second__2, .second__3 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 1em;
+}
+
+.subcription__third {
+background-color: var(--var-color);
+text-align: center;
+padding: 20px;
+font-size: 2em;
+color: #fff;
+}
+
+.subcription__third button {
+margin: 20px;
+width: 250px;
+height: 70px;
+color: #fff;
+font-weight: 700;
+background-color: #333;
+border: none;   
+border-radius: 20px;
+cursor: pointer;
+font-size: 0.5em;
+}
+
+.subcription__third button:hover {
+background-color: rgba(119, 119, 119, 0.8);
+}
+.container1 {
+display: flex;
+flex-wrap: wrap;
+/*border: 1px solid black;*/
+padding-top: 0.45rem;
+padding-left: 16px;
+padding-right: 16px;
+background: #333;
+color: #fff;
+justify-content: space-around;
+
+}
+
+
+.row {
+flex: 1 1 100%;
+display: flex;
+
+}
+
+.column {
+flex: 1;
+padding: 1rem;
+}
+
+.column p:hover, .social-media i:hover{
+    color: rgb(20, 133, 255);
+    cursor: pointer;
+}
+footer ul>li{
+list-style: none;
+padding: 10px;
+}
+
+.social-media i{
+    color: #fff;
+}
+@media screen and (max-width: 600px) {
+.column {
+    flex: 1 1 100%;
+}
+}

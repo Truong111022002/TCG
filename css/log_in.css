@@ -1,0 +1,247 @@
+.login-hero {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-image: url(backround/68241724-azul-vector-realista-agua-burbujas-de-patrones-sin-fisuras-fondo-con-la-ilustración-líquida-de.webp);
+    width: 100%;
+    height: 640px;
+}
+.logo-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(52, 104, 126);
+}
+.signup-content {
+    margin: 0 auto;
+    color: #0f0f0f;
+    padding: 0 0 30px;
+}
+/* Áp dụng cho lớp hoạt đông với max-width : 360px */
+@media screen and (min-width:360px) {
+    .signup-content {
+        width: 300px;
+    }
+}
+/* Áp dụng cho lớp hoạt đông với min-width : 1366px */
+@media screen and (min-width:1366px) {
+    .signup-content {
+        padding: 0;
+    }
+}
+
+.signup-content h1 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.signup-content__form .submit {
+    border-radius: 8px;
+    background-color: #9d7468ea;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.form-input label {
+    display: block;
+    font-size: 13.33333333px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: hwb(0 5% 95% / 0.832);
+}
+
+.type-email,.type-pass {
+    box-sizing: border-box;
+    border: 2px solid #058af7;
+    background-color: #f8f8f8;
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    padding: 13px;
+    transition: box-shadow 2s ease, border 2s ease, background-color 2s ease, color 2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* .form-input input:hover {
+    box-shadow: 0 2px 20px 6px rgb(238, 250, 16);
+    background-color: #e9d9d9;
+} */
+
+.form-input input:focus {
+    border: 1px solid #0835db;
+    background-color: #fff;
+}
+
+.mask-wrapper {
+    position: relative;
+}
+
+.pw-list {
+    font-size: 12px;
+}
+
+.pw-list__wrapper {
+    display: inline;
+}
+
+.pw-list__wrapper li:before {
+    content: "•";
+    margin-right: 4px;
+}
+
+.pw-list__wrapper li {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.checkbox__container {
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkbox__container,
+.checkbox__facet {
+    display: inline-flex;
+    align-items: center;
+}
+/* Áp dụng cho lớp hoạt đông với max-width : 1365px */
+@media screen and (max-width:1365px) {
+    .checkbox__facet {
+        margin-bottom: 5px;
+    }
+}
+
+.checkbox__facet input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox__facet .checkmark {
+    position: relative;
+    top: -1px;
+    left: 0;
+    min-height: 16px;
+    min-width: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+/* Áp dụng cho lớp hoạt đông với max-width : 1365px */
+@media screen and (max-width:1365px) {
+    .checkbox__facet .checkmark {
+        top: 0;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.checkbox__facet input[type=checkbox]:checked~.checkmark {
+    background-color: #db0872;
+}
+
+.checkbox__facet input[type=checkbox]:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox__facet .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+/* Áp dụng cho lớp hoạt đông với max-width : 1365px */
+@media screen and (max-width:1365px) {
+    .checkbox__facet .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 10px;
+    }
+}
+
+.checkbox__facet.facet {
+    cursor: pointer;
+}
+
+.checkbox__facet.facet:hover .checkbox__option {
+    color: #db089c;
+}
+
+.checkbox__option {
+    margin-left: 11px;
+    font-size: 500;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+
+.container {
+    margin: 24px 0 0 0;
+}
+
+.login-footer__disclaimer {
+    font-size: 15px;
+    color: #ef0808;
+    margin-bottom: 20px;
+}
+
+.login-footer__disclaimer a {
+    color: #0f0f0f;
+    text-decoration: underline;
+}
+
+.login-footer__sign-in {
+    font-size: .75rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.login-footer__sign-in a {
+    color: #0835db;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.signup-content__form .submit:hover {
+    background-color: orangered;
+}
+.form-input.success input { /* <div class="form-row success">..... */
+    border: 2px solid rgb(11, 180, 11); }
+.form-input.success .message::before { color: rgb(0, 69, 7);
+    content: "\2713 passed.";
+    font-weight: 900;
+    font-size: 1em;
+    visibility: visible; }
+.form-input.error input { /* <div class="form-row error">..... */
+    border: 2px solid red; }
+label:after{
+    content:"";
+    padding-right: 30px; }
+.form-input .message {
+    visibility: hidden;
+    margin: 2px 0 12px 0;
+    font-weight: bold;
+    font-size: 11px; }
+.form-input.error .message {
+    visibility: visible;
+    color: red; }
+
+    

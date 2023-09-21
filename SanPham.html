@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/79624eb5cd.js"></script>
+  <title>Sản phẩm</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/SanPham.css">
+  <link rel="stylesheet" href="css/TrangChu.css">
+  <link rel="stylesheet" href="css/Header_Footer.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header_container">
+    <!--Logo-->
+    <div class="header__logo">
+        <a href="TrangChu.html" class="logo__a">
+            <img src="img/images-removebg-preview.png" alt=""  height="80" width="162">
+        </a>
+    </div>
+    <!--Thanh điều hướng-->
+    <div class="navbar" id="navbar_menu">
+      <ul class="navbar__ul">
+        <li class="navbar__li"><a class="navbar__a" href="TrangChu.html">Trang chủ</a></li>
+        <li class="navbar__li"><a class="navbar__a" href="Subscription.html">Giới thiệu</a></li>
+        <li class="navbar__li navbar__dropdown "><a id="drop_content_a" class="navbar__a">Sản phẩm <i
+              class="fa-solid fa-chevron-down"></i></i></a>
+          <ul id="dropdown-content" class="display-none">
+            <li class="dropdown-content__li"><a href="SanPham.html#pokemon" class="dropdown-content__a">Pokemon</a>
+            </li>
+            <li class="dropdown-content__li"><a href="SanPham.html#onepiece" class="dropdown-content__a">One Piece</a></li>
+            <li class="dropdown-content__li"><a href="SanPham.html#yugioh" class="dropdown-content__a">Yu-Gi-Oh</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header__search-user" action="">     
+        <!-- login && shopping -->
+        <div class="header--user">
+          <a href="DangKy.html" class="header--user--btn user--btn">
+            <i class="fa-solid fa-user-plus"></i>
+          </a>
+          <a class="shopping__cart header--user--btn shop--btn">
+            <i class="fa-solid fa-cart-shopping"></i><sup class="no__order-item total">0</sup>
+          </a>
+        </div>
+        <!-- search -->
+        <div class="header--search">
+          <input class="search--input" type="text" placeholder="Tìm kiếm...">
+          <button class="search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- Menu-->
+    <div id="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!--Title đầu phần main-->
+    <div class="main__slider">
+      <p class="main__slider__content">Mặt Hàng </p>
+    </div>
+    <!--Main Card-->
+    <section class="card__section">
+      <!-- Main card item 1 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/poster.jpg" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>001</p>
+          <a href="#" class="card__title">Sword & Shield</a>
+          <span class="card__price">5000000</span>
+
+          <!--click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Main card item 2 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/march-pkm-1.jpg" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>002</p>
+          <a href="#" class="card__title">Single Strike</a>
+          <span class="card__price">1000000</span>
+          <!--click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Main card item 3 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/img3.webp" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>003</p>
+          <a href="#" class="card__title">Miriam</a>
+          <span class="card__price">2000000</span>
+          <!-- click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Main card item 4 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/img4.webp" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>004</p>
+          <a href="#" class="card__title">Scarlet & Violet</a>
+          <span class="card__price">10061000</span>
+          <!-- click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Main card item 5 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/img5.webp" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>005</p>
+          <a href="#" class="card__title">Gardevoir</a>
+          <span class="card__price">5200000</span>
+          <!--click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Main card item 6 -->
+      <div class="card__item">
+        <div class="group__layer">
+          <img class="card__img--top" src="img/img6.webp" alt="">
+        </div>
+        <div class="card__body">
+          <p class="item__id" hidden>006</p>
+          <a href="#" class="card__title">Miriam</a>
+          <span class="card__price">10782000</span>
+          <!--click order -->
+          <button type="submit" href="#" class="add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container1">
+        <div class="row">
+            <div class="column">
+                <h3>How Can We Help?</h3>
+                <p>Contact Customer Service</p>
+                <p>Blog</p>
+                <p>Help Center</p>
+                <p>Accessibility</p>
+                <p>Leave Us Feedback</p>
+                <p>Refund and Return Policy</p>
+                <p>Security Researchers</p>
+            </div>
+            <div class="column">
+                <h3>Buy With Us</h3>
+                <p>TCGplayer Subscription</p>
+                <p>Buyer Safeguard</p>
+                <p>Direct by TCGplayer</p>
+                <p>Gift Cards</p>
+                <p>Cart Optimizer</p>
+                <p>Mass Entry</p>
+                <p>Collection Tracker</p>
+            </div>
+            <div class="column">
+                <h3>Connect With Us</h3>
+                <ul class="social-media">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!--Quay lại đầu trang-->
+  <a href="#" class="back-top">
+    <i class="fa-solid fa-angles-up"></i>
+  </a>
+
+  <!--  Java Scrip -->
+  <script src="Js/main.js"></script>
+  <script src="Js/ThemSanPham.js"></script>
+  <script>
+    const prices = document.querySelectorAll('.card__price');
+    prices.forEach(item => {
+      item.innerText = Number(item.innerText).toLocaleString('de-DE', { style: 'currency', currency: 'VND' });
+    })
+    window.onload = loadShoppingCart;
+  </script>
+</body>
+
+</html>

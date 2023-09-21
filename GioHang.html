@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show cart</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Css-->
+  <link rel="stylesheet" href="css/TrangChu.css">
+  <link rel="stylesheet" href="css/Header_Footer.css">
+  <link rel="stylesheet" href="css/GioHang.css">
+</head>
+
+<body>
+
+  <!--header -->
+  <header id="header_container">
+    <!--Logo-->
+    <div class="header__logo">
+      <a href="TrangChu.html" class="logo__a">
+        <img src="img/images-removebg-preview.png" alt="" height="80" width="162">
+      </a>
+    </div>
+
+    <!--Thanh điều hướng-->
+    <div class="navbar" id="navbar_menu">
+      <ul class="navbar__ul">
+        <li class="navbar__li"><a class="navbar__a" href="TrangChu.html">Trang chủ</a></li>
+        <li class="navbar__li"><a class="navbar__a" href="Subscription.html">Giới thiệu</a></li>
+        <li class="navbar__li navbar__dropdown "><a id="drop_content_a" class="navbar__a">Sản phẩm <i
+              class="fa-solid fa-chevron-down"></i></i></a>
+          <ul id="dropdown-content" class="display-none">
+            <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#pokemon">Pokemon</a>
+            </li>
+            <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#onepiece">One
+                Piece</a></li>
+            <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#yugioh">Yu-Gi-Oh</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header__search-user" action="">
+        <!-- search -->
+        <div class="header--search">
+          <input class="search--input" type="text" placeholder="Tìm kiếm...">
+          <button class="search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- login && shopping -->
+        <div class="header--user">
+          <a href="DangKy.html" class="header--user--btn user--btn">
+            <i class="fa-solid fa-user-plus"></i>
+          </a>
+          <a class="shopping__cart header--user--btn shop--btn">
+            <i class="fa-solid fa-cart-shopping"></i><sup class="no__order-item total">0</sup>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Menu-->
+    <div id="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <!--Main-->
+  <main>
+    <div class="container">
+      <h1>Sản Phẩm Cần Thanh Toán</h1>
+      <table class="list__items">
+        <thead class="list__head"></thead>
+        <tbody class="list__body"></tbody>
+        <tfoot class="list__foot"></tfoot>
+      </table>
+      <br>
+      <div class="btn">
+        <button id="btn-buy">Thanh Toán</button>
+      </div>
+    </div>
+  </main>
+
+  <!--Quay lại đầu trang-->
+  <a href="#" class="back-top">
+    <i class="fa-solid fa-angles-up"></i>
+  </a>
+
+  <!-- Java Script -->
+  <script src="Js/main.js"></script>
+  <script src="Js/ThemSanPham.js"></script>
+
+  <script>
+    window.addEventListener('load', showCart, false);
+  </script>
+</body>
+
+</html>

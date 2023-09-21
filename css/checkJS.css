@@ -1,0 +1,23 @@
+/* Sử dụng bắt lỗi sai Đăng nhập & Đăng Ký      */
+.form-input.success input { /* <div class="form-row success">..... */
+    border: 2px solid rgb(11, 180, 11); }
+.form-input.success .message::before { color: rgb(0, 69, 7);
+    content: "\2713 passed.";
+    font-weight: 900;
+    font-size: 1em;
+    visibility: visible; }
+.form-input.error input { /* <div class="form-row error">..... */
+    border: 2px solid red; }
+label:after{
+    content:"";
+    padding-right: 30px; }
+.form-input .message {
+    visibility: hidden;
+    margin: 2px 0 12px 0;
+    font-weight: bold;
+    font-size: 11px; }
+.form-input.error .message {
+    visibility: visible;
+    color: red; }
+
+    

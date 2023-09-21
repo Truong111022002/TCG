@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/79624eb5cd.js"></script>
+    <!-- Tiêu đề trang -->
+    <title>Trang Chủ</title>
+
+    <link rel="shortcut icon" href="img/icon.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/TrangChu.css">
+    <link rel="stylesheet" href="css/Header_Footer.css">
+</head>
+
+<body>
+    <!--header -->
+    <header id="header_container">
+        <!--Logo-->
+        <div class="header__logo">
+            <a href="TrangChu.html" class="logo__a">
+                <img class="img_logo" src="img/images-removebg-preview.png" alt=""  height="80" width="162">
+            </a>
+        </div>
+
+        <!--Thanh điều hướng-->
+        <div class="navbar" id="navbar_menu">
+            <ul class="navbar__ul">
+                <li class="navbar__li"><a class="navbar__a" href="TrangChu.html">Trang chủ</a></li>
+                <li class="navbar__li"><a class="navbar__a" href="Subscription.html">Giới thiệu</a></li>
+                <li class="navbar__li navbar__dropdown "><a id="drop_content_a" class="navbar__a">Mặt hàng <i
+                            class="fa-solid fa-chevron-down"></i></i></a>
+                    <ul id="dropdown-content" class="display-none">
+                        <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#pokemon">Pokemon</a></li>
+                        <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#onepiece">One Piece</a></li>
+                        <li class="dropdown-content__li"><a class="dropdown-content__a" href="SanPham.html#yugioh">Yu-Gi-Oh</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header__search-user" action="">
+                <!-- login & shopping -->
+                <div class="header--user">
+                    <a href="DangKy.html" class="header--user--btn user--btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                    <a class="shopping__cart header--user--btn shop--btn">
+                        <i class="fa-solid fa-cart-shopping"></i><sup class="no__order-item total">0</sup>
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="header--search">
+                    <input class="search--input" type="text" placeholder="Search...">
+                    <button class="search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu  -->
+        <div id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+    </header>
+    <!--Main-->
+    <main>
+        <section class="search-layout">
+            <!--Phần slibar bên phải-->
+            <div class="filter-drawer">
+                <div class="filter-drawer__body">
+
+                    <!--Search-filter 1-->
+                    <div class="search-filter">
+                        <h2  class="search-filter__title">Availability</h2>
+                        <div class="search-filter__facets">
+                            <div>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Availability-HideOutofStock-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Availability-HideOutofStock-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Hide Out of Stock
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count" style="display: none;"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Search-filter 2-->
+                    <div class="search-filter">
+                        <h2 class="search-filter__title">Product Type</h2>
+                        <div class="search-filter__facets">
+                            <div>
+                                <span class="search-filter__facet">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet">
+                                            <input id="ProductType-Cards-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="ProductType-Cards-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Cards</span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="ProductType-SealedProducts-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="ProductType-SealedProducts-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Sealed Products
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">26
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Search-filter 3-->
+                    <div class="search-filter">
+                        <h2 id="groupLabelCardType" class="search-filter__title">Card Type</h2>
+                        <div class="search-filter__facets">
+                            <div>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Pokemon-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Pokemon-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Pokemon
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">219</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Item-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Item-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Item
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">18</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Supporter-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Supporter-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Supporter</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">18</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Energy-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Energy-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Energy</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">10</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container"><label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Tool-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Tool-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Tool</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">4</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Trainer-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Trainer-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Trainer</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">4</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Stadium-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Stadium-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Stadium</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Search-filter-scroll_bar 4-->                  
+                    <div class="search-filter">
+                        <h2 id="groupLabelRarity" class="search-filter__title">Rarity</h2>
+                        <div class="search-filter__type">
+                            <input type="text" placeholder="Find a Rarity">
+                        </div>
+                        <div class="search-filter__facets scrollable">
+                            <div>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-Common-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-Common-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Common
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">110</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-Uncommon-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-Uncommon-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Uncommon</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">62</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-UltraRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-UltraRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Ultra
+                                                Rare</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">24</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-IllustrationRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-IllustrationRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Illustration
+                                                Rare</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">22</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-Rare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-Rare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Rare</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">21</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-SpecialIllustrationRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-SpecialIllustrationRare-filter-label"
+                                                class="checkbox__option-value">
+                                                Special Illustration
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">10</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-CodeCard-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-CodeCard-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Code Card
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">9</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-DoubleRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-DoubleRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Double Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">8</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-HyperRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-HyperRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Hyper Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">6</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-SecretRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-SecretRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Secret Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-SecretRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-SecretRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Secret Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-SecretRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-SecretRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Secret Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="Rarity-SecretRare-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="Rarity-SecretRare-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Secret Rare
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!--Search-filter 5-->
+                    <div class="search-filter">
+                        <h2 id="groupLabelCardType" class="search-filter__title">Card Type</h2>
+                        <div class="search-filter__facets">
+                            <div>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Pokemon-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Pokemon-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Pokemon
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">219
+                                    </span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Item-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Item-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">
+                                                Item
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">18</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Supporter-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Supporter-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Supporter</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">18</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Energy-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Energy-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Energy</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">10</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container"><label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Tool-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Tool-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Tool</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">4</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Trainer-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Trainer-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Trainer</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">4</span>
+                                </span>
+                                <span class="search-filter__facet enabled">
+                                    <div class="checkbox__container">
+                                        <label class="checkbox__facet checkbox enabled">
+                                            <input id="CardType-Stadium-filter" type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span id="CardType-Stadium-filter-label"
+                                                class="checkbox__option-value checkbox__option-value-mobile">Stadium</span>
+                                        </label>
+                                    </div>
+                                    <span class="search-filter__option-count">2</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Phần nội dung chính -->
+            <section class="delay">
+                <!--Banner đầu -->
+                <div class="delay-wrapper">
+                    <span>
+                        <div class="martech-promos-banner">
+                            <div class="martech-promos-wrapper">
+                                <img src="img/0117_comics-marketplace-search_desktop.webp" alt="" width="100%">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <!--Nội dung main-->
+                <section class="search-results">
+                    
+                    <!--Search-content 1-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 1-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps11.webp" width="150px"class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 2-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 2-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/poster.jpg" width="150px" class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 3-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 3-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps2.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 4-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 4-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/img3.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 5-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 5-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps3.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 6-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 6-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps5.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 7-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 7-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps6.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 8-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 8-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps7.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 9-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+                                    <!--IMG content 9-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps8.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 10-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 10-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/img5.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 11-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 11-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/poster.jpg" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--Search-content 12-->
+                    <div class="search-result">
+                        <div class="search-result__content">
+                            <a href="SanPham.html" class="">
+                                <section class="search-result__product">
+
+                                    <!--IMG content 12-->
+                                    <section class="search-result__image">
+                                        <div class="">
+                                            <img src="img/ps10.webp" width="150px"
+                                                class="">
+                                        </div>
+                                    </section>
+                                    <h3 class="search-result__category-name">Pokemon</h3>
+                                    <h4 class="search-result__subtitle">SV01: Scarlet &amp; Violet Base Set</h4>
+                                    <section class="search-result__rarity">
+                                        <span>Code Card</span>
+                                    </section>
+                                    <span class="search-result__title">Code Card - Scarlet &amp; Violet Booster
+                                        Pack</span>
+                                    <div class="notification notification--out-of-stock inventory">
+                                        <div class="notification--message"> Out of stock </div>
+                                    </div>
+                                    <section class="search-result__market-price">
+                                        <section>
+                                            <span>Market Price:</span>
+                                            <span class="search-result__market-price--value">$0.13</span>
+                                        </section>
+                                    </section>
+                                </section>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Thanh điều trang và Banner cuối-->
+                <div class="search-layout__pagination">
+                    <!--Thanh điều trang-->
+                    <div class="arrow">
+                        <ul class="arrow-item">
+                            <li class="arrow-left">
+                                <a href="trangchu.html">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="arrow-item__number">1</li>
+                            <li class="arrow-item__number">2</li>
+                            <li class="arrow-item__number">...</li>
+                            <li class="arrow-item__number">4</li>
+                            <li class="arrow-item__number">5</li>
+                            <li class="arrow-right">
+                                <a href="trangchu1.html">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Banner cuối-->
+                    <div class="delay-wrapper">
+                        <div class="image-rotator">
+                            <img src="img/PKMN-All-12-Pokemon-ex-SV-Ranked-Desktop.webp" alt="" width="100%" style="border-radius: 5px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer>
+        <div class="container1">
+            <div class="row">
+                <div class="column">
+                    <h3>How Can We Help?</h3>
+                    <p>Contact Customer Service</p>
+                    <p>Blog</p>
+                    <p>Help Center</p>
+                    <p>Accessibility</p>
+                    <p>Leave Us Feedback</p>
+                    <p>Refund and Return Policy</p>
+                    <p>Security Researchers</p>
+                </div>
+                <div class="column">
+                    <h3>Buy With Us</h3>
+                    <p>TCGplayer Subscription</p>
+                    <p>Buyer Safeguard</p>
+                    <p>Direct by TCGplayer</p>
+                    <p>Gift Cards</p>
+                    <p>Cart Optimizer</p>
+                    <p>Mass Entry</p>
+                    <p>Collection Tracker</p>
+                </div>
+                <div class="column">
+                    <h3>Connect With Us</h3>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!--Quay lại đầu trang-->
+    <a href="#" class="back-top">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+     <!--Java Script-->
+    <script src="Js/ThemSanPham.js"></script>
+    <script src="Js/main.js"></script>
+
+    <script>
+        const prices = document.querySelectorAll('.card__price');
+        prices.forEach(item => {
+            item.innerText = Number(item.innerText).toLocaleString('de-DE', { style: 'currency', currency: 'VND' });
+        })
+        window.onload = loadShoppingCart;
+    </script>
+
+</body>
+</html>
